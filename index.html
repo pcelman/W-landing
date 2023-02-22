@@ -9,10 +9,10 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./assets/images/w.png"
     />
     <link rel="stylesheet" href="./index.css" />
-    <title>Frontend Mentor | News homepage</title>
+    <title>WEST</title>
   </head>
   <body>
     <div class="container">
@@ -21,13 +21,18 @@
         <figure class="nav__brand">
           <img src="./assets/images/logo.svg" alt="" class="nav__logo" />
         </figure>
-        <figure class="nav__hamburguer">
+        <!-- <figure class="nav__hamburguer">
           <img src="./assets/images/icon-menu.svg" class="nav__icon" />
-        </figure>
-        <figure class="nav__hamburguer nav__hamburguer--close">
-          <img src="./assets/images/icon-menu-close.svg" class="nav__icon" />
-        </figure>
+        </figure> -->
 
+        <!-- when clicking the input the checkbox would be checked or unchecked -->
+
+        <label for="check" class="nav__hamburger"><img src="./assets/images/icon-menu.svg" class="nav__icon" /></label>
+
+        <label for="check" class="nav__hamburger nav__hamburger--close"><img src="./assets/images/icon-menu-close.svg" class="nav__icon" /></label>
+
+
+<input type="checkbox" class="nav__check" id="check">
 
         <ul class="nav__menu">
           <li class="nav__item">
@@ -47,7 +52,7 @@
           </li>
         </ul>
 
-        
+
       </nav>
 
       <!-- main  -->

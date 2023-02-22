@@ -50,17 +50,9 @@ body {
   width: 100%;
 }
 
-.nav__hamburguer {
-  grid-area: icon;
-  z-index: 10;
-}
-
-.nav__hamburguer--close {
-  display: none;
-}
-
 .nav__menu {
-    opacity: 0;
+  opacity: 0;
+  transition: opacity 0.3;
   position: absolute;
   background-color: white;
   display: grid;
@@ -69,17 +61,44 @@ body {
   list-style: none;
   padding: 0;
   gap: 1rem;
+  pointer-events: none;
 }
 
 .nav__item {
-    text-align: center;
+  text-align: center;
 }
 
 .nav__link {
-    text-decoration: none;
-    color: var(--very-dark-blue);
+  text-decoration: none;
+  color: var(--very-dark-blue);
 }
 
+.nav__hamburger {
+  grid-area: icon;
+  z-index: 10;
+}
+
+.nav__hamburger--close {
+  display: none;
+}
+
+/* if inside .nav there is a checkbox checked, i´d want .nav__menu to do the following */
+.nav:has(:checked) .nav__menu {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.nav:has(:checked) .nav__hamburger--close {
+  display: block;
+}
+
+.nav:has(:checked) .nav__hamburger {
+  display: none;
+}
+
+.nav__check {
+  display: none;
+}
 /* main  */
 
 .main {
