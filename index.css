@@ -235,34 +235,42 @@ body {
 
 @media (min-width: 764px) {
   .container {
-    display: grid;
-    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
     grid-template-areas:
       "nav nav nav nav nav"
       "main main main aside aside"
       "article article article article article";
+    gap: 4rem 2rem;
   }
 
+  .main {
+    display: grid;
+    align-content: space-between;
+  }
   .main__texts {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    gap: 2rem;
+    align-items: flex-end;
+    grid-template-areas:
+      "title text"
+      "title cta";
   }
 
   .main__title {
     grid-area: title;
-    align-self: center;
     font-size: 3.5rem;
+    display: grid;
   }
 
   .main__paragraph {
-    grid-area: p;
+    grid-area: text;
     align-self: start;
   }
 
   .main__cta {
     margin: 0;
-    grid-area: a;
-    align-self: end;
+    grid-area: cta;
+    align-self: flex-start;
     text-align: center;
   }
 
@@ -273,5 +281,34 @@ body {
 
   .main__bg {
     background-image: url("./assets/images/image-web-3-desktop.jpg");
+  }
+
+  /* nav  */
+
+  .nav::before {
+    content: unset;
+  }
+
+  .nav:has(.nav__links:target)::before {
+    pointer-events: unset;
+    opacity: 1;
+  }
+
+  .nav__hamburger,
+  .nav__hamburger--close {
+    display: none;
+  }
+
+  .nav__menu {
+    position: unset;
+    width: unset;
+    max-width: unset;
+    gap: 30px;
+    grid-auto-flow: column;
+    padding: 0;
+    opacity: 1;
+    overflow-y: unset;
+    pointer-events: unset;
+    transition: none;
   }
 }
