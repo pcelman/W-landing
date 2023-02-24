@@ -263,9 +263,9 @@ body {
   }
 
   .main__title {
+    display: grid;
     grid-area: title;
     font-size: 3.5rem;
-    display: grid;
 /* align-items: space-between; */
   }
 
@@ -279,7 +279,6 @@ body {
     grid-area: cta;
     align-self: flex-end;
     text-align: center;
-
   }
 
   .main {
