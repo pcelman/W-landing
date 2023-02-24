@@ -33,7 +33,8 @@ body {
 /* navbar  */
 
 .nav {
-  height: 80px;
+  margin-top: 2rem;
+  height: 50px;
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-areas: "logo icon";
@@ -240,13 +241,17 @@ body {
       "nav nav nav nav nav"
       "main main main aside aside"
       "article article article article article";
-    gap: 4rem 2rem;
+    gap: 2rem 2rem;
+    padding-top: 2rem;
+  
   }
 
   .main {
     display: grid;
     align-content: space-between;
+    padding: 0;
   }
+
   .main__texts {
     display: grid;
     gap: 2rem;
@@ -254,12 +259,14 @@ body {
     grid-template-areas:
       "title text"
       "title cta";
+ 
   }
 
   .main__title {
     grid-area: title;
     font-size: 3.5rem;
     display: grid;
+/* align-items: space-between; */
   }
 
   .main__paragraph {
@@ -270,8 +277,9 @@ body {
   .main__cta {
     margin: 0;
     grid-area: cta;
-    align-self: flex-start;
+    align-self: flex-end;
     text-align: center;
+
   }
 
   .main {
@@ -311,4 +319,5 @@ body {
     pointer-events: unset;
     transition: none;
   }
+
 }
